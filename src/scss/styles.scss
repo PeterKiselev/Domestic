@@ -1,0 +1,111 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'search';
+
+*, *:before, *:after { box-sizing: border-box; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
+p, h1, h2, h3, h4, h5, h6, blockquote, figure { margin: 0; }
+img { object-fit: cover; max-width: 100%; }
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1;}
+
+html { font-size: 10px; scroll-behavior: smooth; }
+
+body {
+    @include font($body-ff, 1.3rem, $body-color, 400, 1.2);
+    background-color: $body-bg;
+    letter-spacing: $letter-space;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+
+    &--wider {
+        @media screen and (min-width: 1280px) {
+            max-width: 1310px;
+        }
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.fw-500 { font-weight: 500; }
+
+.btn {
+    @include flex($df: inline-flex, $jc: center);
+    @include font($fz: 1.5rem, $fc: black);
+    padding: .5em 1em;
+    background-color: $primary-color;
+    border: $border-width * 2 solid $primary-color;
+    cursor: pointer;
+    @include tr;
+    @include hover {
+        background-color: rgba($primary-color, .3);
+    }
+}
+
+#arrowTop {
+    @include flex($jc: center);
+    height: $social-size * 2;
+    width: $social-size * 2;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    border: $border-width * 3 solid $primary-color;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 5;
+    @include tr;
+
+    @include hover {
+        background-color: rgba($primary-color, .7);
+
+        svg { fill: $secondary-color; }
+    }
+
+    svg { 
+        fill: $primary-color;
+        @include tr;
+    }
+
+    @media screen and (min-width: 768px) {
+        right: 50px;
+        bottom: 50px;
+    }
+}
+
+.section {
+    &--bg {
+        background-color: $section-bg;
+    }
+    &__title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $black;
+        letter-spacing: $letter-space;
+        margin-top: 25px;
+    }
+}
+
+
+@import 'cover';
+@import 'advice';
+@import 'question';
+@import 'social-resources';
+@import 'socials';
+@import 'footer';

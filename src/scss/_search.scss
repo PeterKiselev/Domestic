@@ -1,0 +1,37 @@
+.search__logo {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    svg { 
+        cursor: pointer;
+        &:hover {
+            fill: $primary-color;
+        }
+    }
+
+    input {
+        width: 24px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin-left: -24px;
+        padding: 5px 0 5px 24px;
+        cursor: pointer;
+
+        &::placeholder { opacity: 0; }
+
+        &:focus {
+            display: block;
+            transform: translateX(24px);
+            width: 120px;
+            border-bottom: 1px solid #000;
+            padding-left: 0;
+        }
+        &:focus &::placeholder {
+            opacity: 1;
+        }
+    }
+}
+

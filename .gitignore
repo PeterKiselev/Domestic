@@ -1,0 +1,6 @@
+*.psd
+*.zip
+*-assets
+*.fig
+node_modules
+package-lock.json

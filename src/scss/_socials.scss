@@ -1,0 +1,25 @@
+.social {
+    text-align: center;
+    margin-top: 15px;
+
+    &__item {
+        display: inline-block;
+        margin: 0 20px;
+
+        &:not(:first-child) { opacity: 0; }
+    }
+    &__link {
+        display: inline-block;
+
+        svg {
+            @include tr;
+            fill: $black;
+        }
+
+        @include hover {
+            svg { fill: $primary-color; }
+        }
+
+        
+    }
+}

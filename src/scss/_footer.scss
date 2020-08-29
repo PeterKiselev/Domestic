@@ -1,0 +1,31 @@
+.footer {
+    padding: 40px 0 50px;
+
+    &__row {
+        @include flex($ali: flex-start);
+        flex-wrap: wrap;
+    }
+    &__col { margin-right: 30px; }
+
+    &__title {
+        margin-top: 10px;
+        @include font($fz: 1.4rem, $fc: $dark-black);
+    }
+
+    &__copy { margin-top: 50px; }
+}
+
+.pars {
+    margin-top: 10px;
+    
+    &__link {
+        display: inline-block;
+        padding: .8em 0;
+        text-decoration: underline;
+        @include tr;
+
+        @include hover {
+            color: $primary-color;
+        }
+    }
+}

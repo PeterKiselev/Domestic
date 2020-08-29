@@ -1,0 +1,193 @@
+.header {
+    @include posA(0, 0, 0);
+    z-index: 10;
+}
+
+.nav {
+    padding: 20px 0;
+    @include flex($jc: space-between);
+    flex-wrap: wrap;
+
+    &__info {
+        @include flex($jc: start);
+        order: -1;
+    }
+    &__menu {
+        margin-top: 20px;
+        flex-shrink: 0;
+        @include flex($jc: start);
+
+        @media screen and (min-width: 628px) { margin: 0; }
+    }
+    &__btn { margin: 0 30px; }
+}
+
+.search {
+    &__logo {
+        svg { fill: $black; }
+    }
+}
+
+.logo-info {
+    @include flex;
+    &__text {
+        @include font($fz: 1.4rem, $fc: $black, $fw: bold);
+        text-transform: uppercase;
+        margin-right: 8px;
+        display: none;
+
+        @media screen and (min-width: 425px) { display: block; }
+    }
+}
+
+.logo {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: $primary-color;
+}
+
+.toggler-lang {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    white-space: nowrap;
+
+    &__ukr, &__rus { 
+        border-bottom: $border-width * 2 dashed transparent;
+        @include tr; 
+    }
+
+    &__ukr, &__rus { 
+        @include hover {
+            border-color: $primary-color; 
+        }
+    }
+}
+
+.active-lang { font-weight: bold; }
+
+$social-size: 32px;
+
+.toggler {
+    order: -1;
+    z-index: 10;
+    @include flex($jc: center);
+    padding: 10px;
+    width: calc(#{$social-size} + 20px);
+    height: calc(#{$social-size} + 10px);
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+
+    span, span:before, span:after {
+        width: $social-size;
+        height: 3px;
+        background-color: $body-color;
+    }
+
+    span {
+        @include tr;
+        position: relative;
+
+        &:before, &:after {
+            content: '';
+            @include posA;
+        }
+        &:before {
+            top: -15px;
+            transition: transform .3s ease-in, top .3s linear .3s;
+        }
+        &:after {
+            top: 15px;
+            transition: transform .3s ease-in, top .3s linear .3s;
+        }
+
+        .menu-opened & { background-color: transparent; }
+
+        .menu-opened &:before {
+            transform: rotate(45deg);
+            top: 0;
+            transition: top .3s linear, transform .3s ease-in .3s;
+        }
+
+        .menu-opened &:after {
+            transform: rotate(-45deg);
+            top: 0;
+            transition: top .3s linear, transform .3s ease-in .3s;
+        }
+    }
+}
+
+.menu {
+    @include posA(0, 0, 0, 0);
+    z-index: 5;
+    height: 100vh;
+    @include flex($jc: center);
+    flex-direction: column;
+    background-color: rgba($primary-color, .9);
+    opacity: 0;
+    transform-origin: calc(100% - 15px) 15px;
+    transform: translate(0, 0) scale(.1);
+    @include tr(.5s);
+    .menu-opened & {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    @media screen and (min-width: 992px) {
+        position: relative;
+        background-color: transparent;
+        flex-direction: row;
+        flex-grow: 1;
+        height: auto;
+        justify-content: space-between;
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        /* IE10+ specific styles go here */ 
+        justify-content: space-around;
+    }
+
+    &__item {
+        .menu-opened & {
+            margin: 20px;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding: .5em;
+        position: relative;
+        @include tr;
+        @include hover {
+            &:before {
+                background-color: $primary-color;
+            }
+        }
+
+        &:before {
+            content: '';
+            @include posA($bottom: 0, $left: 0);
+            display: inline-block;
+            width: 100%;
+            height: $border-width * 2;
+            background-color: transparent;
+            @include tr;
+        }
+
+        .menu-opened & {
+            padding: .1em;
+            font-size: 2em;
+            color: $black;
+            font-weight: bold;
+        }
+    }
+}
+
+.menu-opened {
+    overflow: hidden;
+}

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>Domestic</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container container--wider">
+            <h1 class="visually-hidden">Domestic</h1>
+            <nav class="nav">
+                <div class="nav__info">
+                    <div class="search">
+                        <form class="search__logo">
+                            <svg width="24" height="24">
+                                <use xlink:href="#search">
+                            </svg>
+                            <input type="text" placeholder="Search">
+                        </form>
+                    </div>  
+                    <div class="logo-info">
+                        <h1 class="logo-info__text">останови насилие</h1>
+                        <a class="logo" href="index.html"></a>
+                    </div>
+                </div>
+                <div class="nav__menu">
+                    <div class="toggler-lang">
+                        <a class="toggler-lang__ukr active-lang" href="#">укр</a>
+                        <a class="toggler-lang__rus" href="#">рус</a>
+                    </div>
+                    <a class="btn nav__btn" href="#">Получить помощь</a>
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#about" class="menu__link menu__link--active">О проекте</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#blog" class="menu__link">Блог</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#resources" class="menu__link">Ресурсы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#contacts" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="toggler" onclick="toggleMenu(event)">
+                    <span></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        
+        <section class="section section--cover section--bg" id="about">
+            <div class="container container--wider">
+                <span class="text-reverse">Инициатива религиозных сообществ</span>
+                <div class="container">
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="article">
+                                    <figure class="article__figure">
+                                        <div class="article__img-block">
+                                            <picture class="article__img-wrap">
+                                                <img class="article__img" src="img/cover-img-1.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                        <figcaption class="article__figcaption">
+                                            <blockquote class="article__blockquote">
+                                                Насильство починається з приниження. Не поспішайте подавати на розлучення.
+                                                Перше, що треба зробити – не запускати ситуацію. Якщо відчуваєте
+                                                дискомфорт і тиск на власні інтереси – не мовчіть!
+                                                <svg class="article__quotes" width="144" height="144">
+                                                    <use xlink:href="#quotes"></use>
+                                                </svg>
+                                            </blockquote>
+                                            <cite class="article__cite">З інтерв'ю журналу Elle</cite>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="article__author">
+                                        <h2 class="article__author-title">Маша Єфросиніна, телеведуча</h2>
+                                        <div class="swiper-buttons">
+                                            <div class="swiper-buttons__btn swiper-buttons__btn--prev">
+                                                <svg width="55" height="55">
+                                                    <use xlink:href="#arrow-prev"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-buttons__btn swiper-buttons__btn--next">
+                                                <svg width="55" height="55">
+                                                    <use xlink:href="#arrow-prev"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="article">
+                                    <figure class="article__figure">
+                                        <div class="article__img-block">
+                                            <picture class="article__img-wrap">
+                                                <img class="article__img" src="img/cover-img-2.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                        <figcaption class="article__figcaption">
+                                            <blockquote class="article__blockquote">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum suscipit aut reiciendis, aperiam quo sit ratione, omnis est provident maiores asperiores iure ea doloribus rerum numquam. Ipsa, blanditiis maiores! Alias.
+                                                <svg class="article__quotes" width="144" height="144">
+                                                    <use xlink:href="#quotes"></use>
+                                                </svg>
+                                            </blockquote>
+                                            <cite class="article__cite">Lorem ipsum dolor sit amet.</cite>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="article__author">
+                                        <h2 class="article__author-title">Lorem, ipsum dolor.</h2>
+                                        <div class="swiper-buttons">
+                                            <div class="swiper-buttons__btn swiper-buttons__btn--prev">
+                                                <svg width="55" height="55">
+                                                    <use xlink:href="#arrow-prev"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-buttons__btn swiper-buttons__btn--next">
+                                                <svg width="55" height="55">
+                                                    <use xlink:href="#arrow-prev"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="article">
+                                    <figure class="article__figure">
+                                        <div class="article__img-block">
+                                            <picture class="article__img-wrap">
+                                                <img class="article__img" src="img/cover-img-3.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                        <figcaption class="article__figcaption">
+                                            <blockquote class="article__blockquote">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, sit officia. Ab asperiores laudantium ullam nam a quod explicabo nemo laboriosam facilis dolore deserunt voluptate ipsam laborum, ducimus cupiditate beatae! Eos, nesciunt! Cumque, blanditiis tempora.
+                                                <svg class="article__quotes" width="144" height="144">
+                                                    <use xlink:href="#quotes"></use>
+                                                </svg>
+                                            </blockquote>
+                                            <cite class="article__cite">Lorem, ipsum.</cite>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="article__author">
+                                        <h2 class="article__author-title">Lorem, ipsum dolor.</h2>
+                                        <div class="swiper-buttons">
+                                            <div class="swiper-buttons__btn swiper-buttons__btn--prev">
+                                                <svg width="55" height="55">
+                                                    <use xlink:href="#arrow-prev"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-buttons__btn swiper-buttons__btn--next">
+                                                <svg width="55" height="55">
+                                                    <use xlink:href="#arrow-prev"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="arrowTop" hidden>
+            <svg width="20" height="20">
+                <use xlink:href="#arrow-double-up"></use>
+            </svg>
+        </div>
+        <section class="section section--advice" id="blog">
+            <div class="container container--wider">
+                <h2 class="visually-hidden">Advice</h2>
+                <div class="advices advices--priest">
+                    <div class="advices__img-block advices__img-block--priest w-100">
+                        <figure class="advices__img-wrap advices__img-wrap--priest">
+                            <img class="advices__img advices__img--priest" src="img/advice-priest-img.jpg" alt="advice priest">
+                            <figcaption class="advices__figcaption advices__figcaption--priest fw-500">Советы священника</figcaption>
+                        </figure>
+                    </div>
+                    <div class="advices__block">
+                        <div class="advice advice--1-2">
+                            <a href="#" class="advice__link">
+                                <h3 class="advice__topic">Воспитание</h3>
+                                <div class="advice__text">Как правильное воспитание вляет на атмосферу в семье и зарождает правильные ценности</div>
+                            </a>
+                        </div>
+                        <div class="advice advice--1-2">
+                            <a href="#" class="advice__link">
+                                <h3 class="advice__topic">Самопознание</h3>
+                                <div class="advice__text">Как правильное воспитание вляет на атмосферу в семье и зарождает правильные ценности</div>
+                            </a>
+                        </div>
+                        <div class="advice advice--1-2">
+                            <a href="#" class="advice__link">
+                                <h3 class="advice__topic">Диалоги</h3>
+                                <div class="advice__text">Как правильное воспитание вляет на атмосферу в семье и зарождает правильные ценности</div>
+                            </a>
+                        </div>
+                        <div class="advice advice--1-2">
+                            <a href="#" class="advice__link">
+                                <h3 class="advice__topic">Семья</h3>
+                                <div class="advice__text">Как правильное воспитание вляет на атмосферу в семье и зарождает правильные ценности</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="advices advices--psychol">
+                    <div class="advice__img-block advices__img-block--psychol w-100">
+                        <figure class="advices__img-wrap advices__img-wrap--psychol">
+                            <img class="advices__img advices__img--psychol" src="img/advice-psychol-img.jpg" alt="advice psychol">
+                            <figcaption class="advices__figcaption advices__figcaption--psychol fw-500">Советы психолога</figcaption>
+                        </figure>
+                    </div>
+                    <div class="advices__block advice__block--psychol">
+                        <div class="advice">
+                            <a href="#" class="advice__link">
+                                <h3 class="advice__topic">Общие советы</h3>
+                                <div class="advice__text">Не стоит думать, что проблемы в семье характерны только для ваших отношений, это не правильно</div>
+                            </a>
+                        </div>
+                        <div class="advice">
+                            <a class="advice__link" href="#">
+                                <h3 class="advice__topic">Подросткам</h3>
+                                <div class="advice__text">Что делать, если родители постоянно ссорятся и эти соры приводят к негативным последствиям</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--question">
+            <div class="container container--wider">
+                <h2 class="visually-hidden"></h2>
+                <div class="question fw-500">
+                    <h2 class="question__title">
+                        <span class="question__arrow">
+                            <svg width="23" height="38">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
+                        Пострадали от домашнего насилия?</h2>
+                    <a href="#" class="btn question__btn">Получить помощь</a>
+                </div>
+            </div>
+        </section>
+        <section class="section section--social" id="resources">
+            <div class="container">
+                <h2 class="section__title">ресурсы для социальной работы</h2>
+                <div class="resources">
+                    <div class="resource">
+                        <a href="#" class="resource__link" target="_blank" rel="noopener noreferrer">
+                            <figure class="resource__figure">
+                                <picture class="resource__img-wrap">
+                                    <img class="resource__img" src="img/social-resource-img-1.jpg" alt="">
+                                </picture>
+                                <figcaption class="resource__figcaption fw-500">обмен опытом</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="resource">
+                        <a href="#" class="resource__link" target="_blank" rel="noopener noreferrer">
+                            <figure class="resource__figure">
+                                <picture class="resource__img-wrap">
+                                    <img class="resource__img" src="img/social-resource-img-2.jpg" alt="">
+                                </picture>
+                                <figcaption class="resource__figcaption fw-500">Советы для священнослужителей и социальных работников</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="resource">
+                        <a href="#" class="resource__link" target="_blank" rel="noopener noreferrer">
+                            <figure class="resource__figure">
+                                <picture class="resource__img-wrap">
+                                    <img class="resource__img" src="img/social-resource-img-3.jpg" alt="">
+                                </picture>
+                                <figcaption class="resource__figcaption fw-500">Фандрайзинг</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="logo-canada">
+                    <img src="img/logo-Canada.png" alt="logo Canada">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="section section--bg footer" id="contacts">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__col">
+                    <h4 class="footer__title">Разделы</h4>
+                    <ul class="pars">
+                        <li class="pars__item">
+                            <a class="pars__link" href="#">Советы священника</a>
+                        </li>
+                        <li class="pars__item">
+                            <a class="pars__link" href="#">Советы психолога</a>
+                        </li>
+                        <li class="pars__item">
+                            <a class="pars__link" href="#">Постадавшим от насилия</a>
+                        </li>
+                        <li class="pars__item">
+                            <a class="pars__link" href="#">Новости</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Ресурсы для социальной работы</h4>
+                    <ul class="pars">
+                        <li class="pars__item">
+                            <a class="pars__link" href="#">Обмен опытом</a>
+                        </li>
+                        <li class="pars__item">
+                            <a class="pars__link" href="#">Советы священнослужителей и социальных работников</a>
+                        </li>
+                        <li class="pars__item">
+                            <a class="pars__link" href="#">Фандрайзинг</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Подписывайся</h4>
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <svg width="40" height="40">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <svg width="40" height="40">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <svg width="40" height="40">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer__copy">© Церкви против домашнего насилия, 2020. Все права защищены.Копирование материалов без разрешения администрации запрещено.</p>
+        </div>
+    </footer>
+    <svg style="display: none;">
+        <symbol id="search" viewBox="0 0 24 24">
+            <path d="M9.89167 19.7661C4.44212 19.7661 0.00860596 15.3326 0.00860596 9.88306C0.00860596 4.43351 4.44212 0 9.89167 0C15.3412 0 19.7747 4.43351 19.7747 9.88306C19.7747 15.3326 15.3412 19.7661 9.89167 19.7661ZM9.89167 1.87357C5.4752 1.87357 1.88217 5.4666 1.88217 9.88306C1.88217 14.2995 5.4752 17.8925 9.89167 17.8925C14.3081 17.8925 17.9012 14.2995 17.9012 9.88306C17.9012 5.4666 14.3081 1.87357 9.89167 1.87357ZM23.7159 23.7256C24.0817 23.3598 24.0817 22.7666 23.7159 22.4008L19.5238 18.2087C19.1579 17.8428 18.5648 17.8428 18.199 18.2087C17.8331 18.5745 17.8331 19.1677 18.199 19.5335L22.3911 23.7256C22.574 23.9085 22.8137 24 23.0535 24C23.2933 24 23.533 23.9085 23.7159 23.7256Z"/>
+        </symbol>
+        <symbol id="arrow-prev" viewBox="0 0 55 55">
+            <path d="M45.8333 25.2083H17.9437L30.7542 12.3979L27.5 9.16667L9.16666 27.5L27.5 45.8333L30.7312 42.6021L17.9437 29.7917H45.8333V25.2083Z" />
+        </symbol>
+        <symbol id="quotes" viewBox="0 0 144 144">
+            <path d="M0 82.2858H30.8571L10.2855 123.428H41.1427L61.7142 82.2858V20.5716H0V82.2858Z" fill="#CCCCCC"/>
+            <path d="M82.2858 20.5716V82.2858H113.143L92.5713 123.428H123.428L144 82.2858V20.5716H82.2858Z" fill="#CCCCCC"/>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 40 40">
+            <path d="M37.7897 0.000976562H2.20766C0.989232 0.000976562 0 0.988249 0 2.20867V37.7913C0 39.0117 0.989232 40.0003 2.20766 40.0003H21.364V24.5102H16.1517V18.4726H21.364V14.0204C21.364 8.85481 24.5181 6.04053 29.127 6.04053C31.3366 6.04053 33.2315 6.20584 33.784 6.27763V11.677L30.5871 11.6783C28.0811 11.6783 27.5977 12.8698 27.5977 14.6171V18.4707H33.5766L32.7948 24.5076H27.5971V39.9983H37.789C39.0088 39.9983 39.9987 39.0084 39.9987 37.7913V2.20736C39.998 0.988249 39.0094 0.000976562 37.7897 0.000976562Z" />
+        </symbol>
+        <symbol id="arrow-double-up" viewBox="0 0 970.504 970.503">
+            <path d="M120.027,962.802c26.6,0,53.5-8.801,75.7-27l288.1-234.7l290.899,237c22.301,18.1,49.101,27,75.7,27
+    		c34.8,0,69.4-15.101,93.101-44.2c41.899-51.4,34.1-127-17.2-168.8l-366.7-298.8c-44.1-36-107.5-36-151.6,0l-363.8,296.5
+    		c-51.4,41.8-59.1,117.399-17.3,168.8C50.727,947.702,85.227,962.802,120.027,962.802z"/>
+    	    <path d="M120.027,541.902c26.6,0,53.5-8.8,75.7-27l288.1-234.7l290.899,237c22.301,18.101,49.101,27,75.7,27
+    		c34.8,0,69.4-15.1,93.101-44.2c41.899-51.399,34.1-127-17.2-168.8l-366.7-298.8c-44.1-36-107.5-36-151.6,0l-363.8,296.4
+    		c-51.4,41.9-59.1,117.5-17.3,168.9C50.727,526.802,85.227,541.902,120.027,541.902z"/>
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 23 38">
+            <path d="M0.168762 34.5619L3.48751 37.8807L22.05 19.3182L3.48751 0.755676L0.168762 4.07443L15.4125 19.3182L0.168762 34.5619Z"/>
+        </symbol>
+    </svg>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

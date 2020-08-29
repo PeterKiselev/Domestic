@@ -1,0 +1,43 @@
+.question {
+    @include flex($jc: center);
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 1280px) {
+        padding-right: 70px;
+    }
+
+    &__arrow {
+        display: inline-block;
+        @include flex($jc: center);
+        text-align: center;
+        width: 70px;
+        background-color: $primary-color;
+        @include posA($top: 0, $left: 0, $bottom: 0);
+
+        svg { fill: $black; }   
+    }
+    &__title {
+        @include flex($jc: center);
+        flex-grow: 1;
+        background-color: $medium-black;
+        min-height: 70px;
+        @include font($fz: 2.2rem, $fc: $secondary-color, $fw: inherit);
+        padding-left: 70px;
+        text-align: center;
+        padding: 10px 20px 10px 70px;
+        position: relative;
+    }
+    &__btn {
+        height: 70px;
+        width: 100%;
+        max-width: 300px;
+        text-transform: uppercase;
+        font-weight: inherit;
+        margin: 30px 0;
+
+        @media screen and (min-width: 992px) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}

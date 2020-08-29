@@ -1,0 +1,68 @@
+.resources {
+    @include flex($jc: center);
+    margin-left: -10px;
+    margin-right: -10px;
+    flex-wrap: wrap;
+}
+
+.resource {
+    width: 100%;
+    max-width: 365px;
+    margin: 25px 10px;
+    background-color: $section-bg;
+
+    &__link {
+        display: inline-block;
+        @include full;
+
+        @include hover {
+            .resource__figcaption {
+                background-color: $medium-black;
+                color: $secondary-color;
+            }
+            .resource__img-wrap {
+                &:before {
+                    background-color: rgba($dark-black, .4);
+                }
+            }
+        }
+    }
+
+    &__img-wrap {
+        display: block;
+        position: relative;
+        padding-top: 50%;
+        overflow: hidden;
+        &:before {
+            content: '';
+            @include posA(0, 0, 0, 0);
+            display: inline-block;
+            background-color: rgba($dark-black, 0);
+            z-index: 1;
+            @include tr;
+        }
+    }
+    &__img {
+        @include posA($top: 50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &__figcaption {
+        height: 70px;
+        padding: 5px;
+        @include flex($jc: center);
+        @include font($fz: 1.4rem, $fc: $black, $fw: null);
+        background-color: $primary-color;
+        text-transform: uppercase;
+        text-align: center;
+        overflow: hidden;
+        @include clamp($clamp: 4);
+        @include tr;
+    }
+}
+
+.logo-canada {
+    text-align: center;
+    margin: 55px 0;
+}

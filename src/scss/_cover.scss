@@ -1,0 +1,171 @@
+.section {
+    &--cover {
+        padding-top: 140px;
+        position: relative;
+
+        & > .container--wider {
+            padding: 0;
+
+            @media screen and (min-width: 992px) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+.text-reverse {
+    transform: rotate(180deg);
+    position: absolute;
+    writing-mode: tb-rl;
+    text-transform: uppercase;
+    @include font($fz: 1.4rem, $fc: $medium-gray, $fw: 500);
+}
+
+.article {
+    position: relative;
+
+    @media screen and (min-width: 992px) { padding: 30px; }
+
+    &__figure {
+        @include flex($jc: center);
+        flex-wrap: wrap;
+        padding-bottom: 150px;
+
+        @media screen and (min-width: 576px) { flex-wrap: nowrap; }
+
+        @media screen and (min-width: 992px) {
+            align-items: start;
+            padding-bottom: 0;
+        }
+    }
+    &__img-block {
+        flex-basis: 100%;
+
+        @media screen and (min-width: 375px) and (max-width: 575px) {
+            flex-basis: 80%;
+        }
+
+        @media screen and (min-width: 576px) { flex-basis: 40%; }
+    }
+    &__img-wrap {
+        display: block;
+        position: relative;
+        padding-top: 150%;
+        overflow: hidden;
+    }
+    &__img {
+        @include posA($top: 50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &__figcaption {
+        color: $black;
+        margin-top: 30px;
+
+        @media screen and (min-width: 576px) {
+            padding: 20px;
+            flex-basis: 60%;
+            margin-top: 0;
+        }
+        @media screen and (min-width: 768px) { padding: 40px; }
+    }
+    &__blockquote {
+        position: relative;
+        font-style: italic;
+        overflow: hidden;
+        font-weight: 300;
+        font-size: 2.9rem;
+        max-height: 385px;
+        @include clamp($clamp: 10);
+
+        @media screen and (min-width: 992px) { font-size: 3.2rem; }
+    }
+    &__quotes {
+        @include posA($right: 0%, $top: -7%);
+        z-index: -1;
+        width: 120px;
+        height: 120px;
+
+        @media screen and (min-width: 768px) {
+            width: 144px;
+            height: 144px;
+        }
+    }
+    &__cite {
+        font-style: normal;
+        display: block;
+        margin-top: 32px;
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+    &__author {
+        @include posA($bottom: 0, $left: 0);
+        @include flex;
+        background-color: $medium-black;
+        width: 100%;
+        min-height: 70px;
+        padding-left: 2.2em;
+    }
+    &__author-title {
+        @include font($fz: 2.2rem, $fc: $secondary-color, $fw: 900);
+        text-align: center;
+
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
+    }
+}
+
+.swiper-buttons {
+    @include flex;
+    @include posA($top: -50%, $left: 50%);
+    @include transform;
+    height: 70px;
+
+
+    @media screen and (min-width: 768px) {
+        position: static;
+        @include transform(0,0);
+    }
+    
+    &__btn {
+        background-color: $primary-color;
+        cursor: pointer;
+        height: 100%;
+        width: 70px;
+        @include flex($jc: center);
+        @include tr;
+        border: $border-width * 2 solid $dark-black;
+
+        & + & {
+            margin-left: 30px;
+            @media screen and (min-width: 768px) {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        @include hover {
+            background-color: $primary-color;
+            svg {
+                fill: $medium-black;
+            }
+        }
+
+        &--next { transform: rotate(180deg); }
+
+        svg {
+            fill: $dark-black;
+            @include tr;
+
+            @media screen and (min-width: 768px) { fill: $section-bg; }  
+        }
+    }
+}
+

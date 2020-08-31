@@ -1,12 +1,16 @@
 .section {
     &--cover {
-        padding-top: 140px;
+        padding-top: 69px;
         position: relative;
+
+        @media screen and (min-width: 920px) {
+            padding-top: 100px;
+        }
 
         & > .container--wider {
             padding: 0;
 
-            @media screen and (min-width: 992px) {
+            @media screen and (min-width: 1310px) {
                 padding-left: 15px;
                 padding-right: 15px;
             }
@@ -15,22 +19,25 @@
 }
 
 .text-reverse {
+    display: none;
     transform: rotate(180deg);
     position: absolute;
     writing-mode: tb-rl;
     text-transform: uppercase;
     @include font($fz: 1.4rem, $fc: $medium-gray, $fw: 500);
+
+    @media screen and (min-width: 992px) { display: inline-block; }
 }
 
 .article {
     position: relative;
+    padding-bottom: 70px;
 
     @media screen and (min-width: 992px) { padding: 30px; }
 
     &__figure {
-        @include flex($jc: center);
+        @include flex($jc: center, $ali: flex-start);
         flex-wrap: wrap;
-        padding-bottom: 150px;
 
         @media screen and (min-width: 576px) { flex-wrap: nowrap; }
 
@@ -41,18 +48,24 @@
     }
     &__img-block {
         flex-basis: 100%;
+        align-self: flex-end;
+        margin-top: 17px;
 
         @media screen and (min-width: 375px) and (max-width: 575px) {
             flex-basis: 80%;
         }
 
-        @media screen and (min-width: 576px) { flex-basis: 40%; }
+        @media screen and (min-width: 576px) { 
+            flex-basis: 40%;
+            margin-top: 0;
+        }
     }
     &__img-wrap {
         display: block;
         position: relative;
         padding-top: 150%;
         overflow: hidden;
+        
     }
     &__img {
         @include posA($top: 50%, $left: 50%);
@@ -61,10 +74,11 @@
         min-height: 100%;
     }
     &__figcaption {
+        order: -1;
         color: $black;
-        margin-top: 30px;
 
         @media screen and (min-width: 576px) {
+            order: 0;
             padding: 20px;
             flex-basis: 60%;
             margin-top: 0;
@@ -76,11 +90,28 @@
         font-style: italic;
         overflow: hidden;
         font-weight: 300;
-        font-size: 2.9rem;
-        max-height: 385px;
-        @include clamp($clamp: 10);
+        font-size: 2.3rem;
+        max-height: 194px;
+        @include clamp($clamp: 7);
+        @media screen and (min-width: 454px) { 
+            max-height: 166px;
+            $clamp: 6;
+        }
+        @media screen and (min-width: 488px) { 
+            max-height: 138px;
+            $clamp: 5;
+        }
+        @media screen and (min-width: 768px) { 
+            font-size: 2.8rem;
+            max-height: 270px;
+            $clamp: 8;
+        }
 
-        @media screen and (min-width: 992px) { font-size: 3.2rem; }
+        @media screen and (min-width: 992px) { 
+            font-size: 3.2rem; 
+            max-height: 385px;
+            $clamp: 10;
+        }
     }
     &__quotes {
         @include posA($right: 0%, $top: -7%);
@@ -96,76 +127,63 @@
     &__cite {
         font-style: normal;
         display: block;
-        margin-top: 32px;
+        margin-top: 17px;
         font-weight: 500;
         font-size: 1.8rem;
+
+        @media screen and (min-width: 576px) {
+            margin-top: 32px;
+        }
     }
     &__author {
+        display: none;
         @include posA($bottom: 0, $left: 0);
-        @include flex;
         background-color: $medium-black;
         width: 100%;
-        min-height: 70px;
         padding-left: 2.2em;
-    }
-    &__author-title {
-        @include font($fz: 2.2rem, $fc: $secondary-color, $fw: 900);
+        line-height: 70px;
+
+        @media screen and (min-width: 768px) { @include flex; }
+
+        @include font($fz: 1.5rem, $fc: $secondary-color, $fw: 900);
         text-align: center;
+        padding-right: 150px;
+        height: 70px;
 
         @media screen and (min-width: 992px) {
             text-align: left;
+            font-size: 2.2rem;
         }
     }
 }
 
 .swiper-buttons {
     @include flex;
-    @include posA($top: -50%, $left: 50%);
-    @include transform;
+    @include posA($left: 50%, $bottom: 0);
+    @include transform($delta_y: 0);
+    z-index: 5;
     height: 70px;
 
-
     @media screen and (min-width: 768px) {
-        position: static;
-        @include transform(0,0);
+        right: 0;
+        left: auto;
+        transform: translate(0,0);
     }
     
     &__btn {
-        background-color: $primary-color;
+        background-color: $medium-black;
         cursor: pointer;
         height: 100%;
         width: 70px;
         @include flex($jc: center);
         @include tr;
-        border: $border-width * 2 solid $dark-black;
 
-        & + & {
-            margin-left: 30px;
-            @media screen and (min-width: 768px) {
-                margin-left: 0;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            background-color: transparent;
-            border-color: transparent;
-        }
-
-        @include hover {
+        &--next { 
+            transform: rotate(180deg);
             background-color: $primary-color;
-            svg {
-                fill: $medium-black;
-            }
+            svg { fill: $medium-black; }
         }
-
-        &--next { transform: rotate(180deg); }
-
-        svg {
-            fill: $dark-black;
-            @include tr;
-
-            @media screen and (min-width: 768px) { fill: $section-bg; }  
-        }
+        &--prev { fill: $section-bg; }
     }
 }
 

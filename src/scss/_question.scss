@@ -1,43 +1,53 @@
 .question {
-    @include flex($jc: center);
+    @include flex($jc: center, $ali: stretch);
     flex-wrap: wrap;
+    min-height: 70px;
+    max-width: 365px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 635px) {
+        flex-wrap: nowrap;
+        max-width: 100%;
+        margin: 0;
+    }
 
     @media screen and (min-width: 1280px) {
         padding-right: 70px;
     }
 
     &__arrow {
-        display: inline-block;
-        @include flex($jc: center);
+        display: none;
         text-align: center;
         width: 70px;
         background-color: $primary-color;
         @include posA($top: 0, $left: 0, $bottom: 0);
 
         svg { fill: $black; }   
+
+        @media screen and (min-width: 768px) {
+            @include flex($jc: center);
+        }
     }
     &__title {
         @include flex($jc: center);
         flex-grow: 1;
         background-color: $medium-black;
         min-height: 70px;
-        @include font($fz: 2.2rem, $fc: $secondary-color, $fw: inherit);
-        padding-left: 70px;
+        @include font($fz: 1.7rem, $fc: $secondary-color, $fw: inherit);
         text-align: center;
-        padding: 10px 20px 10px 70px;
+        padding: 10px 20px;
         position: relative;
+        
+
+        @media screen and (min-width: 768px) { padding-left: 90px;  }
+        @media screen and (min-width: 850px) { font-size: 2.2rem; }
     }
     &__btn {
-        height: 70px;
-        width: 100%;
-        max-width: 300px;
-        text-transform: uppercase;
-        font-weight: inherit;
-        margin: 30px 0;
-
-        @media screen and (min-width: 992px) {
-            margin-top: 0;
-            margin-bottom: 0;
+        max-width: 365px;
+        @media screen and (min-width: 635px) {
+            flex-basis: 40%;
+            height: auto;
+            max-width: 300px;
         }
     }
 }

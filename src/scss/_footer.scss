@@ -22,10 +22,5 @@
         display: inline-block;
         padding: .8em 0;
         text-decoration: underline;
-        @include tr;
-
-        @include hover {
-            color: $primary-color;
-        }
     }
 }

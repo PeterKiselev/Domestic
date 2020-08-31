@@ -15,11 +15,5 @@
             @include tr;
             fill: $black;
         }
-
-        @include hover {
-            svg { fill: $primary-color; }
-        }
-
-        
     }
 }

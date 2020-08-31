@@ -17,11 +17,11 @@
                 </div>
             </div>
             <div class="nav__menu">
-                <div class="toggler-lang">
-                    <a class="toggler-lang__ukr active-lang" href="#">укр</a>
-                    <a class="toggler-lang__rus" href="#">рус</a>
+                <div class="langs">
+                    <a class="langs__lang langs__lang--ukr active-lang" href="#">укр</a>
+                    <a class="langs__lang langs__lang--rus" href="#">рус</a>
                 </div>
-                <a class="btn nav__btn" href="#">Получить помощь</a>
+                <a class="btn btn--help nav__btn" href="#">Получить помощь</a>
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="#about" class="menu__link menu__link--active">О проекте</a>
@@ -38,8 +38,10 @@
                 </ul>
             </div>
             <a href="#" class="toggler" onclick="toggleMenu(event)">
-                <span></span>
+                <svg width="32" height="32">
+                    <use xlink:href="#menu"></use>
+                </svg>
             </a>
-        </nav>
+        </nav>  
     </div>
 </header>

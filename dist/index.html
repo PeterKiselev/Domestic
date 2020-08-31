@@ -29,11 +29,11 @@
                     </div>
                 </div>
                 <div class="nav__menu">
-                    <div class="toggler-lang">
-                        <a class="toggler-lang__ukr active-lang" href="#">укр</a>
-                        <a class="toggler-lang__rus" href="#">рус</a>
+                    <div class="langs">
+                        <a class="langs__lang langs__lang--ukr active-lang" href="#">укр</a>
+                        <a class="langs__lang langs__lang--rus" href="#">рус</a>
                     </div>
-                    <a class="btn nav__btn" href="#">Получить помощь</a>
+                    <a class="btn btn--help nav__btn" href="#">Получить помощь</a>
                     <ul class="menu">
                         <li class="menu__item">
                             <a href="#about" class="menu__link menu__link--active">О проекте</a>
@@ -50,13 +50,14 @@
                     </ul>
                 </div>
                 <a href="#" class="toggler" onclick="toggleMenu(event)">
-                    <span></span>
+                    <svg width="32" height="32">
+                        <use xlink:href="#menu"></use>
+                    </svg>
                 </a>
-            </nav>
+            </nav>  
         </div>
     </header>
     <main>
-        
         <section class="section section--cover section--bg" id="about">
             <div class="container container--wider">
                 <span class="text-reverse">Инициатива религиозных сообществ</span>
@@ -84,21 +85,7 @@
                                             <cite class="article__cite">З інтерв'ю журналу Elle</cite>
                                         </figcaption>
                                     </figure>
-                                    <div class="article__author">
-                                        <h2 class="article__author-title">Маша Єфросиніна, телеведуча</h2>
-                                        <div class="swiper-buttons">
-                                            <div class="swiper-buttons__btn swiper-buttons__btn--prev">
-                                                <svg width="55" height="55">
-                                                    <use xlink:href="#arrow-prev"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="swiper-buttons__btn swiper-buttons__btn--next">
-                                                <svg width="55" height="55">
-                                                    <use xlink:href="#arrow-prev"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h2 class="article__author">Маша Єфросиніна, телеведуча</h2>
                                 </article>
                             </div>
                             <div class="swiper-slide">
@@ -111,7 +98,7 @@
                                         </div>
                                         <figcaption class="article__figcaption">
                                             <blockquote class="article__blockquote">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum suscipit aut reiciendis, aperiam quo sit ratione, omnis est provident maiores asperiores iure ea doloribus rerum numquam. Ipsa, blanditiis maiores! Alias.
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis iusto dolorem dolores magnam adipisci omnis esse possimus maiores pariatur accusamus, corrupti officiis labore! Fugit, doloremque ipsam!
                                                 <svg class="article__quotes" width="144" height="144">
                                                     <use xlink:href="#quotes"></use>
                                                 </svg>
@@ -119,21 +106,7 @@
                                             <cite class="article__cite">Lorem ipsum dolor sit amet.</cite>
                                         </figcaption>
                                     </figure>
-                                    <div class="article__author">
-                                        <h2 class="article__author-title">Lorem, ipsum dolor.</h2>
-                                        <div class="swiper-buttons">
-                                            <div class="swiper-buttons__btn swiper-buttons__btn--prev">
-                                                <svg width="55" height="55">
-                                                    <use xlink:href="#arrow-prev"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="swiper-buttons__btn swiper-buttons__btn--next">
-                                                <svg width="55" height="55">
-                                                    <use xlink:href="#arrow-prev"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h2 class="article__author">Lorem, ipsum dolor.</h2>
                                 </article>
                             </div>
                             <div class="swiper-slide">
@@ -154,76 +127,73 @@
                                             <cite class="article__cite">Lorem, ipsum.</cite>
                                         </figcaption>
                                     </figure>
-                                    <div class="article__author">
-                                        <h2 class="article__author-title">Lorem, ipsum dolor.</h2>
-                                        <div class="swiper-buttons">
-                                            <div class="swiper-buttons__btn swiper-buttons__btn--prev">
-                                                <svg width="55" height="55">
-                                                    <use xlink:href="#arrow-prev"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="swiper-buttons__btn swiper-buttons__btn--next">
-                                                <svg width="55" height="55">
-                                                    <use xlink:href="#arrow-prev"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h2 class="article__author">Lorem, ipsum dolor.</h2>
                                 </article>
+                            </div>
+                        </div>
+                        <div class="swiper-buttons">
+                            <div class="swiper-buttons__btn swiper-buttons__btn--prev">
+                                <svg width="55" height="55">
+                                    <use xlink:href="#arrow-prev"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-buttons__btn swiper-buttons__btn--next">
+                                <svg width="55" height="55">
+                                    <use xlink:href="#arrow-prev"></use>
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div id="arrowTop" hidden>
-            <svg width="20" height="20">
-                <use xlink:href="#arrow-double-up"></use>
-            </svg>
-        </div>
         <section class="section section--advice" id="blog">
             <div class="container container--wider">
                 <h2 class="visually-hidden">Advice</h2>
                 <div class="advices advices--priest">
-                    <div class="advices__img-block advices__img-block--priest w-100">
-                        <figure class="advices__img-wrap advices__img-wrap--priest">
-                            <img class="advices__img advices__img--priest" src="img/advice-priest-img.jpg" alt="advice priest">
-                            <figcaption class="advices__figcaption advices__figcaption--priest fw-500">Советы священника</figcaption>
-                        </figure>
+                    <div class="advices__img-block advices__img-block--priest">
+                        <a href="#" class="advices__img-link">
+                            <picture class="advices__img-wrap advices__img-wrap--priest">
+                                <img class="advices__img advices__img--priest" src="img/advice-priest-img.jpg" alt="advice priest">
+                            </picture>
+                        </a>
+                        <a href="#" class="btn advices__link advices__link--priest">Советы священника</a>
                     </div>
-                    <div class="advices__block">
-                        <div class="advice advice--1-2">
+                    <div class="advices__block advices__block--priest">
+                        <div class="advice advices__article">
                             <a href="#" class="advice__link">
                                 <h3 class="advice__topic">Воспитание</h3>
                                 <div class="advice__text">Как правильное воспитание вляет на атмосферу в семье и зарождает правильные ценности</div>
                             </a>
                         </div>
-                        <div class="advice advice--1-2">
+                        <div class="advice advices__article">
                             <a href="#" class="advice__link">
                                 <h3 class="advice__topic">Самопознание</h3>
-                                <div class="advice__text">Как правильное воспитание вляет на атмосферу в семье и зарождает правильные ценности</div>
+                                <div class="advice__text">Не стоит винить в происходящем окружающих, посомтри сперва как ты можешь испраивть ситуацию</div>
                             </a>
                         </div>
-                        <div class="advice advice--1-2">
+                        <div class="advice advices__article">
                             <a href="#" class="advice__link">
                                 <h3 class="advice__topic">Диалоги</h3>
-                                <div class="advice__text">Как правильное воспитание вляет на атмосферу в семье и зарождает правильные ценности</div>
+                                <div class="advice__text">Иногда простой разговор по душам может привести все дела в порядок, не стоит боятся общения</div>
                             </a>
                         </div>
-                        <div class="advice advice--1-2">
+                        <div class="advice advices__article">
                             <a href="#" class="advice__link">
                                 <h3 class="advice__topic">Семья</h3>
-                                <div class="advice__text">Как правильное воспитание вляет на атмосферу в семье и зарождает правильные ценности</div>
+                                <div class="advice__text">Прежде, чем начинать ссору, посомтрите на вашего ребенка, стоит ли игра свечь</div>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="advices advices--psychol">
-                    <div class="advice__img-block advices__img-block--psychol w-100">
-                        <figure class="advices__img-wrap advices__img-wrap--psychol">
-                            <img class="advices__img advices__img--psychol" src="img/advice-psychol-img.jpg" alt="advice psychol">
-                            <figcaption class="advices__figcaption advices__figcaption--psychol fw-500">Советы психолога</figcaption>
-                        </figure>
+                    <div class="advices__img-block advices__img-block--psychol">
+                        <a href="#" class="advices__img-link">
+                            <picture class="advices__img-wrap advices__img-wrap--psychol">
+                                <img class="advices__img advices__img--psychol" src="img/advice-psychol-img.jpg" alt="advice psychol">
+                            </picture>
+                        </a>
+                        <a href="#" class="btn advices__link advices__link--psychol">Советы психолога</a>
                     </div>
                     <div class="advices__block advice__block--psychol">
                         <div class="advice">
@@ -267,7 +237,7 @@
                                 <picture class="resource__img-wrap">
                                     <img class="resource__img" src="img/social-resource-img-1.jpg" alt="">
                                 </picture>
-                                <figcaption class="resource__figcaption fw-500">обмен опытом</figcaption>
+                                <figcaption class="resource__figcaption btn">обмен опытом</figcaption>
                             </figure>
                         </a>
                     </div>
@@ -277,7 +247,7 @@
                                 <picture class="resource__img-wrap">
                                     <img class="resource__img" src="img/social-resource-img-2.jpg" alt="">
                                 </picture>
-                                <figcaption class="resource__figcaption fw-500">Советы для священнослужителей и социальных работников</figcaption>
+                                <figcaption class="resource__figcaption btn btn--dark">Советы для священнослужителей и социальных работников</figcaption>
                             </figure>
                         </a>
                     </div>
@@ -287,7 +257,7 @@
                                 <picture class="resource__img-wrap">
                                     <img class="resource__img" src="img/social-resource-img-3.jpg" alt="">
                                 </picture>
-                                <figcaption class="resource__figcaption fw-500">Фандрайзинг</figcaption>
+                                <figcaption class="resource__figcaption btn">Фандрайзинг</figcaption>
                             </figure>
                         </a>
                     </div>
@@ -386,6 +356,14 @@
         </symbol>
         <symbol id="arrow-right" viewBox="0 0 23 38">
             <path d="M0.168762 34.5619L3.48751 37.8807L22.05 19.3182L3.48751 0.755676L0.168762 4.07443L15.4125 19.3182L0.168762 34.5619Z"/>
+        </symbol>
+        <symbol id="menu" viewBox="0 0 92.833 92.833">
+            <path d="M89.834,1.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V4.75
+    			C92.834,3.096,91.488,1.75,89.834,1.75z"/>
+    		<path d="M89.834,36.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V39.75
+    			C92.834,38.096,91.488,36.75,89.834,36.75z"/>
+    		<path d="M89.834,71.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V74.75
+    			C92.834,73.095,91.488,71.75,89.834,71.75z"/>
         </symbol>
     </svg>
     <script src="js/main.min.js"></script>

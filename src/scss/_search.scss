@@ -26,8 +26,8 @@
             display: block;
             transform: translateX(24px);
             width: 120px;
-            border-bottom: 1px solid #000;
-            padding-left: 0;
+            border-bottom: $border-width * 2 solid $black;
+            padding-left: 15px;
         }
         &:focus &::placeholder {
             opacity: 1;

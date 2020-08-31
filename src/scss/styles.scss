@@ -6,7 +6,12 @@
 
 *, *:before, *:after { box-sizing: border-box; }
 ul { list-style: none; margin: 0; padding: 0; }
-a { text-decoration: none; color: inherit; }
+a { 
+    text-decoration: none; 
+    color: inherit;
+    @include tr;
+    @include hover { opacity: .8; }
+}
 p, h1, h2, h3, h4, h5, h6, blockquote, figure { margin: 0; }
 img { object-fit: cover; max-width: 100%; }
 h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1;}
@@ -25,7 +30,7 @@ body {
     padding: 0 15px;
 
     &--wider {
-        @media screen and (min-width: 1280px) {
+        @media screen and (min-width: 1310px) {
             max-width: 1310px;
         }
     }
@@ -46,45 +51,28 @@ body {
 
 .btn {
     @include flex($df: inline-flex, $jc: center);
-    @include font($fz: 1.5rem, $fc: black);
-    padding: .5em 1em;
+    @include font($fz: 1.4rem, $fc: $black, $fw: 500);
+    padding: 5px 10px;
     background-color: $primary-color;
-    border: $border-width * 2 solid $primary-color;
+    border: none;
     cursor: pointer;
-    @include tr;
-    @include hover {
-        background-color: rgba($primary-color, .3);
+    width: 100%;
+    height: 70px;
+    max-width: 300px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &--help {
+        max-width: 165px;
+        height: auto;
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-transform: none;
+        min-height: 35px;
     }
-}
-
-#arrowTop {
-    @include flex($jc: center);
-    height: $social-size * 2;
-    width: $social-size * 2;
-    background-color: $secondary-color;
-    border-radius: 50%;
-    border: $border-width * 3 solid $primary-color;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    cursor: pointer;
-    z-index: 5;
-    @include tr;
-
-    @include hover {
-        background-color: rgba($primary-color, .7);
-
-        svg { fill: $secondary-color; }
-    }
-
-    svg { 
-        fill: $primary-color;
-        @include tr;
-    }
-
-    @media screen and (min-width: 768px) {
-        right: 50px;
-        bottom: 50px;
+    &--dark {
+        background-color: $medium-black;
+        color: $secondary-color;
     }
 }
 
@@ -93,14 +81,23 @@ body {
         background-color: $section-bg;
     }
     &__title {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        line-height: 1.5;
         font-weight: bold;
         text-transform: uppercase;
         color: $black;
         letter-spacing: $letter-space;
         margin-top: 25px;
+        text-align: center;
+
+        @media screen and (min-width: 780px) {
+            font-size: 1.4rem;
+            text-align: left;
+        }
     }
 }
+
+.swiper-wrapper { align-items: flex-end; }
 
 
 @import 'cover';

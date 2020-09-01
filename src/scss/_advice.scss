@@ -4,7 +4,9 @@
     @include flex($jc: center, $ali: stretch);
     flex-wrap: wrap;
 
-    @media screen and (min-width: 786px) { flex-wrap: nowrap; }
+    @media screen and (min-width: 400px) { justify-content: stretch; }
+
+    @media screen and (min-width: 786px) { flex-wrap: nowrap; justify-content: center; }
 
     &--psychol { flex-direction: row-reverse; }
 
@@ -18,6 +20,15 @@
             flex: 1 0 51%;
             max-width: 650px;
         }
+        @media screen and (min-width: 400px) {
+            height: 70px;
+            max-width: 300px;
+        }
+        @media screen and (min-width: 786px) {
+            height: 300px;
+            &--priest { max-width: 370px; }
+            &--psychol { max-width: 650px; }
+        }
     }
     &__img-link { 
         display: inline-block;
@@ -29,6 +40,10 @@
         position: relative;
         overflow: hidden;
         height: 100%;
+
+        @media screen and (min-width: 400px) { display: none; }
+
+        @media screen and (min-width: 786px) { display: block; }
 
         &--priest {
             width: 100%;
@@ -66,6 +81,22 @@
             transform-origin: 0 0;
         }
         @media screen and (min-width: 375px) { bottom: -70px; }
+
+        @media screen and (min-width: 400px) {
+            transform: none;
+            top: 0;
+
+            &--psychol { right: 0; left: auto; }
+        }
+
+        @media screen and (min-width: 786px) {
+            &--priest { 
+                transform: rotate(-90deg); 
+                top: auto; 
+                bottom: -70px;
+            }
+        }
+
         &--psychol {
             @media screen and (min-width: 992px) { 
                 top: 0;

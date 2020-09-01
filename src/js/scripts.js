@@ -21,6 +21,8 @@ menuLinks();
 
 // slider
 var swiper = new Swiper('.swiper-container', {
+    observer: true,
+    observeParents: true,
     slidesPerGroup: 1,
     loop: true,
     autoplay: {

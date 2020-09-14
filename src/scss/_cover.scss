@@ -136,16 +136,17 @@
         }
     }
     &__author {
-        display: none;
+        font-size: 0;
+        @include flex;
         @include posA($bottom: 0, $left: 0);
         background-color: $medium-black;
         width: 100%;
         padding-left: 2.2em;
         line-height: 70px;
 
-        @media screen and (min-width: 768px) { @include flex; }
+        @media screen and (min-width: 768px) { font-size: 1.5rem; }
 
-        @include font($fz: 1.5rem, $fc: $secondary-color, $fw: 900);
+        @include font($fz: null, $fc: $secondary-color, $fw: 900);
         text-align: center;
         padding-right: 150px;
         height: 70px;
@@ -159,16 +160,9 @@
 
 .swiper-buttons {
     @include flex;
-    @include posA($left: 50%, $bottom: 0);
-    @include transform($delta_y: 0);
-    z-index: 5;
+    @include posA($bottom: 0, $right: 0);
     height: 70px;
-
-    @media screen and (min-width: 768px) {
-        right: 0;
-        left: auto;
-        transform: translate(0,0);
-    }
+    z-index: 1;
     
     &__btn {
         background-color: $medium-black;
